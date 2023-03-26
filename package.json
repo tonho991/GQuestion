@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "firebase": "^9.18.0",
+    "openai": "^3.2.1"
+  },
+  "name": "gquestion",
+  "version": "1.0.0",
+  "description": "Generate questions from a text",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonho991/gquestion.git"
+  },
+  "author": "tonho991",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonho991/gquestion/issues"
+  },
+  "homepage": "https://github.com/tonho991/gquestion#readme"
+}

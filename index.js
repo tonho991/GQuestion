@@ -18,7 +18,6 @@ app.use((err, req, res, next) =>{
 
 fs.readdirSync('./routes').forEach(file => {
   const route = require(`./routes/${file}`);
-  console.log(route.route)
   app.use(route.route, route.app);
 });
 

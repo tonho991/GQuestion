@@ -27,7 +27,8 @@ app.post('/', async (req, res) => {
     userId,
     text,
     questions,
-    response
+    response,
+    timezone
   } = decodedData;
 
   if (!text || !questions || !response) {
@@ -37,7 +38,7 @@ app.post('/', async (req, res) => {
     });
   }
 
-  const checkData = await checkRequests(userId);
+  const checkData = await checkRequests(userId, timezone);
   if (!checkData.success) {
     res.status(401).json({
       status: "error",
@@ -92,7 +93,7 @@ async function generateText(text, question, answer) {
       presence_penalty: 0,
       stop: ["input:"]
     });
-    console.log(completion.data)
+    
     const result = completion.data.choices[0].text;
 
     return result;
